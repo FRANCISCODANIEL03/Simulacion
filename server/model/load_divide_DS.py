@@ -12,3 +12,9 @@ def datasetGen():
     x_df = df.drop("class", axis = 1)
     y_df = df["class"].copy()
     return x_df, y_df
+
+def dsTrain():
+    # DataSet de entrenamiento 
+    x_train = train_set.drop("class", axis = 1)
+    y_train = train_set["class"].copy()
+    return x_train, y_train
