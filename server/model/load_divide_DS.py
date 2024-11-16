@@ -6,3 +6,9 @@ df = load_kdd_dataset("/home/pako0311/Escritorio/Simulacion/datasets/datasets/NS
 
 #Division del DataSet en los diferentes subconjuntos
 train_set, val_set, test_set = train_val_test_split(df)
+
+def datasetGen():
+    # DataSet general 
+    x_df = df.drop("class", axis = 1)
+    y_df = df["class"].copy()
+    return x_df, y_df
