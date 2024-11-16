@@ -2,3 +2,4 @@
 datasets/
 server/__pycache__/
 server/.venv/
+server/model/__pycache__/
