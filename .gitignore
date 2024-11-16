@@ -1,2 +1,4 @@
 .ipynb_checkpoints/
 datasets/
+server/__pycache__/
+server/.venv/
