@@ -18,3 +18,9 @@ def dsTrain():
     x_train = train_set.drop("class", axis = 1)
     y_train = train_set["class"].copy()
     return x_train, y_train
+
+def dsVal():
+    # DataSet de validacion
+    x_val = val_set.drop("class", axis = 1)
+    y_val = val_set["class"].copy()
+    return x_val, y_val
