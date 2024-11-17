@@ -20,3 +20,7 @@ def dsPreparer():
     x_val_prep = data_preparer.transform(x_val)
     return x_train_prep, x_val_prep
 
+def DSpreparer(dataSet):
+    x_prep = data_preparer.transform(dataSet)
+    return x_prep
+
