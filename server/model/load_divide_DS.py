@@ -24,3 +24,9 @@ def dsVal():
     x_val = val_set.drop("class", axis = 1)
     y_val = val_set["class"].copy()
     return x_val, y_val
+
+def dsTest():
+    # DataSet de test
+    x_test = test_set.drop("class", axis = 1)
+    y_test = test_set["class"].copy()
+    return x_test, y_test
