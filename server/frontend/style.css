@@ -30,3 +30,26 @@ button{
     z-index: 1;
     position: relative;
 }
+
+button::before{
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to 
+    right, #ffffff4d 0%, #0ef 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover::before{
+    width: 15em;
+}
+
+button:hover{
+    color: #1f293a;
+}
