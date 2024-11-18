@@ -53,3 +53,15 @@ button:hover::before{
 button:hover{
     color: #1f293a;
 }
+
+.dvs{
+    background: transparent;
+    border: 2px solid #55608f;
+    outline: none;
+    border-radius: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 2em;
+}
