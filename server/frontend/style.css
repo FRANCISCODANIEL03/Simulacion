@@ -14,3 +14,19 @@ h2{
     font-size: 2em;
     color: #0ef;
 }
+
+button{
+    background: transparent;
+    width: 15em;
+    height: 3em;
+    border-radius: 30em;
+    cursor: pointer;
+    font-size: 1em;
+    color: #0ef;
+    font-weight: 600;
+    margin: 20px 0 20px;
+    border: 2px solid #0ef;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
