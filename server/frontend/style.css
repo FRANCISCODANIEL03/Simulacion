@@ -139,3 +139,6 @@ tbody tr:hover{
     background-color: #ffffff4d;
 }
 
+tbody td{
+    position: relative;
+}
