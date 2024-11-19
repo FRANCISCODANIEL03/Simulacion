@@ -87,3 +87,12 @@ button:hover{
 #div_tbl{
     display: none;
 }
+
+.div-img2{
+    display: flex;
+    align-items: center;
+    border: 2px solid #55608f;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 40px;
+}
