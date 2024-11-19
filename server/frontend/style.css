@@ -142,3 +142,14 @@ tbody tr:hover{
 tbody td{
     position: relative;
 }
+
+tbody td:hover::before{
+    content: "";
+    position: absolute;
+    background-color: #ffffff33;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    z-index: -1;
+}
