@@ -130,3 +130,8 @@ td{
     color: #fff;
     text-align: left;
 }
+
+thead td{
+    background-color: #55608f
+}
+
