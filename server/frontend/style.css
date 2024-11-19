@@ -77,3 +77,9 @@ button:hover{
     flex-direction: column;
     margin-left: 10em;
 }
+
+.div-img{
+    display: flex;
+    align-items: center;
+    display: none;
+}
