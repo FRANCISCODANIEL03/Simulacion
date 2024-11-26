@@ -13,3 +13,8 @@ class MLStripper(HTMLParser):
     def get_data(self):
         return ''.join(self.fed)
     
+# Esta funcion se encarga de eliminar los tags HTML que se encuentren en el texto de correo electronico
+def strip_tags(HTML):
+    s = MLStripper()
+    s.feed(HTML)
+    return s.get_data()
