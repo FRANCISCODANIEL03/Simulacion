@@ -15,3 +15,8 @@ def parse_index(path_to_index, n_elements):
             "email_path":os.path.join(DATASET_PATH, path)
         })
     return ret_indexes
+
+def parse_email(index):
+    p = Parser()
+    pmail = p.parse(index["email_path"])
+    return pmail, index["label"]
