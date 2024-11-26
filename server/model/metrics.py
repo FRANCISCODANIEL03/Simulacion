@@ -10,7 +10,8 @@ x, y = create_prep_dataset("/home/pako0311/Escritorio/Simulacion/datasets/datase
 x_train, y_train = x[:60000], y[:60000]
 x_test, y_test = x[60000:], y[60000:]
 
-    
+vectorizer = CountVectorizer()
+x_train = vectorizer.fit_transform(x_train)
 
-
-
+clf = LogisticRegression()
+clf.fit(x_train, y_train)
