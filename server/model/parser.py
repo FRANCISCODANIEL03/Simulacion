@@ -26,3 +26,16 @@ class Parser:
                 "body":body,
                 "content_type":content_type}
     
+    def get_email_body(self, payload, content_type):
+        """Extract the body of the email"""
+        body = []
+        if type(payload) is str and content_type == 'text/plain':
+            return self.tokenize(payload)
+        elif type(payload) is str and content_type == 'text/html':
+            return self.tokenize(strip_tags(payload))
+        elif type(payload) is list:
+            for p in payload:
+                body += self.get_email_body(p.get_payload(),
+                                            p.get_content_type())
+        return body
+     
