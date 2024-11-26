@@ -15,3 +15,12 @@ x_train = vectorizer.fit_transform(x_train)
 
 clf = LogisticRegression()
 clf.fit(x_train, y_train)
+
+x_test = vectorizer.transform(x_test)
+
+y_pred = clf.predict(x_test)
+
+def predict_acc():
+    accuracy = accuracy_score(y_test, y_pred)
+    return accuracy
+    
