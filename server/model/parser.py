@@ -38,4 +38,14 @@ class Parser:
                 body += self.get_email_body(p.get_payload(),
                                             p.get_content_type())
         return body
-     
+        
+    def tokenize(self, text):
+        """transform a text string in tokens, Perform two main actions, 
+        clean the punctuation symbols and do stemming of the text"""
+        for c in self.punctuation:
+            text = text.replace(c, "")
+        text = text.replace("\t", " ")
+        text = text.replace("\n", " ")
+        tokens = list(filter(None, text.split(" ")))
+        # Stemming of the tokens 
+        return [self.stemmer.stem(w) for w in tokens if w not in self.stopwords]
