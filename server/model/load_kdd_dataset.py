@@ -1,6 +1,5 @@
 import arff
 import pandas as pd
-import numpy as np 
 
 def load_kdd_dataset(data_path):
     """Lectura de DataSet NSL-KDD."""
