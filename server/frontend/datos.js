@@ -13,3 +13,18 @@ btn_met.addEventListener('click', async (e)=>{
     div_main.classList.add("dvs")
     div_main.classList.remove("dvs3")
 })
+
+btn_view.addEventListener('click', (e)=>{
+    e.preventDefault()
+    div_imgs.style.display = 'flex'
+})
+
+const limpiarTabla = ()=>{
+    while(tbl.firstChild){
+        tbl.removeChild(tbl.firstChild)
+    }
+}
+
+
+
+
