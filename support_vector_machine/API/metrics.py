@@ -27,3 +27,13 @@ svm_clf_sc = Pipeline([
 ('linear_svc', SVC(kernel = 'linear'))
 ])
 svm_clf_sc.fit(x_train_reduced, y_train)
+
+def pred_f1score_r2():
+    y_pred = svm_clf_sc.predict(x_val_reduced)
+
+    f1score = f1_score(y_pred, y_val, pos_label='phishing')
+    return f1score
+
+svm_clf2 = SVC(kernel = 'linear', C=1)
+svm_clf2.fit(x_train_prep, y_train)
+
