@@ -11,3 +11,8 @@ def d_train_set():
     y_train = train_set['URL_Type_obf_Type'].copy()
     return x_train, y_train
 
+def d_val_set():
+    x_val = val_set.drop('URL_Type_obf_Type', axis=1)
+    y_val = val_set['URL_Type_obf_Type'].copy()
+    return x_val, y_val
+
