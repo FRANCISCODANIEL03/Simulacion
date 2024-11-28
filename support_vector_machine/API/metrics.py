@@ -14,3 +14,10 @@ x_train_prep, x_val_prep, x_test_prep = prepare_dataset()
 # SVM Large Margin Classification 
 svm_clf = SVC(kernel = 'linear', C = 50)
 svm_clf.fit(x_train_reduced, y_train)
+
+def pred_f1score_r():
+    # Predecir un DataSet reducido
+    y_pred = svm_clf.predict(x_val_reduced)
+
+    f1score = f1_score(y_pred, y_val, pos_label='phishing')
+    return f1score
