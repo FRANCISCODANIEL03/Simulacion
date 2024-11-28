@@ -21,3 +21,9 @@ def pred_f1score_r():
 
     f1score = f1_score(y_pred, y_val, pos_label='phishing')
     return f1score
+
+svm_clf_sc = Pipeline([
+('scaler', RobustScaler()),
+('linear_svc', SVC(kernel = 'linear'))
+])
+svm_clf_sc.fit(x_train_reduced, y_train)
