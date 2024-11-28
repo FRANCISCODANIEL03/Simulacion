@@ -16,3 +16,7 @@ def d_val_set():
     y_val = val_set['URL_Type_obf_Type'].copy()
     return x_val, y_val
 
+def d_test_set():
+    x_test = test_set.drop('URL_Type_obf_Type', axis=1)
+    y_test = test_set['URL_Type_obf_Type'].copy()
+    return x_test, y_test
