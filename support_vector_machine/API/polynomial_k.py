@@ -14,3 +14,11 @@ x_train_reduced, x_val_reduced = red_ds()
 y_train_num = y_train.factorize()[0]
 y_val_num = y_val.factorize()[0]
 
+
+polynomial_svm_clf = Pipeline([
+    ('poly_features', PolynomialFeatures(degree=3)),
+    ('scaler', StandardScaler()),
+    ('svm_clf', LinearSVC(C=20, loss='hinge', random_state = 42, max_iter = 100000))
+])
+
+polynomial_svm_clf.fit(x_train_reduced, y_train_num)
