@@ -10,3 +10,7 @@ X_val, y_val = divide_DS_val()
 X_test, y_test = divide_DS_test()
 X_train_scaled = x_train_scaled()
 X_val_scaled = x_val_scaled()
+
+# Modelo entrenado con el conjunto de datos sin escalar
+clf_tree = DecisionTreeClassifier(max_depth=MAX_DEPTH, random_state=42)
+clf_tree.fit(X_train, y_train)
