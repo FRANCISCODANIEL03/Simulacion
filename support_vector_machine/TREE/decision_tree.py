@@ -14,3 +14,7 @@ X_val_scaled = x_val_scaled()
 # Modelo entrenado con el conjunto de datos sin escalar
 clf_tree = DecisionTreeClassifier(max_depth=MAX_DEPTH, random_state=42)
 clf_tree.fit(X_train, y_train)
+
+# Modelo entrenado con el conjunto de datos escalado
+clf_tree_scaled = DecisionTreeClassifier(max_depth=MAX_DEPTH, random_state=42)
+clf_tree_scaled.fit(X_train_scaled, y_train)
