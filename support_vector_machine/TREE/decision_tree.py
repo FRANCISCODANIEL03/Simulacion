@@ -29,3 +29,12 @@ def pred_escalar():
     return res1, res2
 
 
+def pred_sin_escalar():
+    # Predecimos con el conjunto de datos de validación
+    y_pred = clf_tree.predict(X_val)
+    y_prep_pred = clf_tree_scaled.predict(X_val_scaled)
+    # Comparamos resultados entre escalado y sin escalar
+    res1, res2 = evaluate_result(y_pred, y_val, y_prep_pred, y_val, f1_score)
+    return res1, res2
+
+
