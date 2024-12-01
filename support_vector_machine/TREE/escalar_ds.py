@@ -12,3 +12,8 @@ def x_train_scaled():
     # Transformación a un DataFrame de Pandas
     X_train_scaled = DataFrame(X_train_scaled, columns=X_train.columns, index=X_train.index)
     return X_train_scaled
+
+def x_test_scaled():
+    scaler2 = RobustScaler()
+    X_test_scaled = scaler2.fit_transform(X_test)
+    return X_test_scaled
