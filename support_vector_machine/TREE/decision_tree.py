@@ -18,3 +18,14 @@ clf_tree.fit(X_train, y_train)
 # Modelo entrenado con el conjunto de datos escalado
 clf_tree_scaled = DecisionTreeClassifier(max_depth=MAX_DEPTH, random_state=42)
 clf_tree_scaled.fit(X_train_scaled, y_train)
+
+def pred_escalar():
+    # Predecimos con el conjunto de datos de entrenamiento
+    y_train_pred = clf_tree.predict(X_train)
+    y_train_prep_pred = clf_tree_scaled.predict(X_train_scaled)
+
+    # Comparamos resultados entre escalado y sin escalar
+    res1 , res2 = evaluate_result(y_train_pred, y_train, y_train_prep_pred, y_train, f1_score)
+    return res1, res2
+
+
