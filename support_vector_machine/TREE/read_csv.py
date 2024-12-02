@@ -7,3 +7,9 @@ df = pd.read_csv('/home/pako0311/Escritorio/Simulacion/datasets/datasets/TotalFe
 # de salida a numérica para calcular correlaciones
 X = df.copy()
 X['calss'] = X['calss'].factorize()[0]
+
+# Calculamos correlaciones
+corr_matrix = X.corr()
+corr_matrix["calss"].sort_values(ascending=False)
+
+X.corr()
