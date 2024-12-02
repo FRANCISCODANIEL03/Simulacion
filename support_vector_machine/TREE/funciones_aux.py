@@ -15,3 +15,7 @@ def remove_labels(df, label_name):
     y = df[label_name].copy()
     return (X, y)
 
+def evaluate_result(y_pred, y, y_prep_pred, y_prep, metric):
+    res1 = metric(y_pred, y, average='weighted')
+    res2 = metric(y_prep_pred, y_prep, average='weighted')
+    return res1, res2
