@@ -22,3 +22,7 @@ train_set, val_set, test_set = train_val_test_split(X)
 def divide_DS_train():
     X_train, y_train = remove_labels(train_set, 'calss')
     return X_train, y_train
+
+def divide_DS_val():
+    X_val, y_val = remove_labels(val_set, 'calss')
+    return X_val, y_val
