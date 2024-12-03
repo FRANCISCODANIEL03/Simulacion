@@ -18,3 +18,7 @@ corr_matrix[corr_matrix["calss"] > 0.05]
 
 # Dividimos el conjunto de datos
 train_set, val_set, test_set = train_val_test_split(X)
+
+def divide_DS_train():
+    X_train, y_train = remove_labels(train_set, 'calss')
+    return X_train, y_train
