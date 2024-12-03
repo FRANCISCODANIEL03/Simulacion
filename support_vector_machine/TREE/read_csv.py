@@ -13,3 +13,8 @@ corr_matrix = X.corr()
 corr_matrix["calss"].sort_values(ascending=False)
 
 X.corr()
+
+corr_matrix[corr_matrix["calss"] > 0.05]
+
+# Dividimos el conjunto de datos
+train_set, val_set, test_set = train_val_test_split(X)
