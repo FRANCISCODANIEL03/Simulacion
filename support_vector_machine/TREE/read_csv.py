@@ -26,3 +26,7 @@ def divide_DS_train():
 def divide_DS_val():
     X_val, y_val = remove_labels(val_set, 'calss')
     return X_val, y_val
+
+def divide_DS_test():
+    X_test, y_test = remove_labels(test_set, 'calss')
+    return X_test, y_test
