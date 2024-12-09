@@ -4,3 +4,6 @@ server/__pycache__/
 server/.venv/
 server/model/__pycache__/
 datasetsSVM/
+archive (2)/
+support_vector_machine/API/__pycache__/
+support_vector_machine/TREE/__pycache__/
