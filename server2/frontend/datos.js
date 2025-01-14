@@ -5,7 +5,7 @@ const div_tbl = document.getElementById("div_tbl")
 const tbl = document.getElementById("tbl-body")
 const div_main = document.getElementById("div_main")
 
-URL = "http://localhost:5000/metrics2"
+URL = "http://127.0.0.1:5000/metrics"
 btn_met.addEventListener('click', async (e)=>{
     e.preventDefault()
     extraerDat()
