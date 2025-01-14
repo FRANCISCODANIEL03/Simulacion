@@ -1,7 +1,7 @@
 from load_kdd_dataset import load_kdd_dataset
 from train_val_test_split import train_val_test_split 
 
-df = load_kdd_dataset("/home/pako0311/Escritorio/DATASET/archive (4)/Rice_MSC_Dataset/Rice_MSC_Dataset.arff")
+df = load_kdd_dataset("/home/pako0311/Escritorio/Simulacion/server2/model/Rice_MSC_Dataset.arff")
 
 #Division del DataSet en los diferentes subconjuntos
 train_set, val_set, test_set = train_val_test_split(df)
