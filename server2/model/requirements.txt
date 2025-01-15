@@ -1,7 +1,5 @@
 Flask
-Gunicorn
 pandas
 numpy
 scikit-learn 
-flask_cors
 liac-arff
