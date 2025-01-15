@@ -5,7 +5,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import RobustScaler
 import pandas as pd
-import numpy as np
 
 # Construccion de un pipeline para los atributos numericos
 num_pipeline = Pipeline([
