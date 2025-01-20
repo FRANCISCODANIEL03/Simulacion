@@ -1,21 +1,27 @@
+/* Base Styles */
 * {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #1f293a;
     flex-direction: column;
+    padding: 20px;
 }
 
-h2{
+h2 {
     font-size: 2em;
     color: #0ef;
+    text-align: center;
 }
 
-button{
+button {
     background: transparent;
     width: 15em;
     height: 3em;
@@ -24,14 +30,14 @@ button{
     font-size: 1em;
     color: #0ef;
     font-weight: 600;
-    margin: 20px 0 20px;
+    margin: 20px 0;
     border: 2px solid #0ef;
-    overflow: hidden;
-    z-index: 1;
     position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
 }
 
-button::before{
+button::before {
     content: '';
     width: 0;
     height: 3em;
@@ -39,111 +45,110 @@ button::before{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to 
-    right, #ffffff4d 0%, #0ef 100%);
-    transition: .5s ease;
-    display: block;
+    background-image: linear-gradient(to right, #ffffff4d 0%, #0ef 100%);
+    transition: width 0.5s ease;
     z-index: -1;
 }
 
-button:hover::before{
+button:hover::before {
     width: 15em;
 }
 
-button:hover{
+button:hover {
     color: #1f293a;
 }
 
-.dvs{
+/* Containers */
+.dvs {
     background: transparent;
     border: 2px solid #55608f;
-    outline: none;
     border-radius: 40px;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 2em;
+    margin: 2em 0;
+    padding: 20px;
+    margin-left: 10%;
 }
 
-.dvs3{
+.dvs2{
+    display: flex;
+}
+
+.dvs3 {
     background: transparent;
     border: 2px solid #55608f;
-    outline: none;
     border-radius: 40px;
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 10em;
+    padding: 20px;
+    margin: 20px auto;
 }
 
-.div-img{
+.div-img {
     display: flex;
     align-items: center;
-    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-#div_tbl{
-    display: none;
-}
-
-.div-img2{
+.div-img2 {
     display: flex;
     align-items: center;
     border: 2px solid #55608f;
     flex-direction: column;
     margin: 10px;
     border-radius: 40px;
+    padding: 10px;
+    max-width: 300px;
 }
 
-img{
-    width: 80%;
+img {
+    width: 100%;
+    max-width: 80%;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
-.dvs2{
-    background: transparent;
-    outline: none;
-    border-radius: 40px;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    margin-left: 2em;
-}
-
-table{
+table {
     margin: 20px;
     font-weight: 100;
     border-collapse: collapse;
     overflow: hidden;
     box-shadow: 0 0 20px #0000001a;
+    width: 100%;
+    max-width: 600px;
 }
 
-table:hover{
+table:hover {
     cursor: pointer;
 }
 
-td{
+td {
     background-color: #ffffff33;
     padding: 15px;
     color: #fff;
     text-align: left;
 }
 
-thead td{
-    background-color: #55608f
+thead td {
+    background-color: #55608f;
 }
 
-tbody tr:hover{
+tbody tr:hover {
     background-color: #ffffff4d;
 }
 
-tbody td{
+tbody td {
     position: relative;
 }
 
-tbody td:hover::before{
+tbody td:hover::before {
     content: "";
     position: absolute;
     background-color: #ffffff33;
@@ -152,4 +157,51 @@ tbody td:hover::before{
     top: -9999px;
     bottom: -9999px;
     z-index: -1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 12em;
+        height: 2.5em;
+        font-size: 0.9em;
+    }
+
+    .dvs3, .dvs {
+        padding: 10px;
+    }
+
+    .div-img {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    .dvs2{
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 10em;
+        height: 2.2em;
+        font-size: 0.8em;
+    }
+
+    td {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 90%;
+    }
 }
