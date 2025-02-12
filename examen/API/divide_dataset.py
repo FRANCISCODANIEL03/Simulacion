@@ -14,3 +14,8 @@ def d_val_set():
     x_val = val_set.drop('Class', axis=1)
     y_val = val_set['Class'].copy()
     return x_val, y_val
+
+def d_test_set():
+    x_test = test_set.drop('Class', axis=1)
+    y_test = test_set['Class'].copy()
+    return x_test, y_test
