@@ -8,3 +8,7 @@ x_train_reduced, x_val_reduced = red_ds()
 x_val, y_val = d_val_set()
 x_train, y_train = d_train_set()
 x_train_prep, x_val_prep, x_test_prep = prepare_dataset()
+
+# SVM Large Margin Classification 
+svm_clf = SVC(probability=True)
+svm_clf.fit(x_train_reduced, y_train)
