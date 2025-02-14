@@ -21,3 +21,8 @@ polynomial_svm_clf = Pipeline([
 ])
 
 polynomial_svm_clf.fit(x_train_reduced, y_train_num)
+
+def pred_reduced_f1s():
+    y_pred = polynomial_svm_clf.predict(x_val_reduced)
+    f1score =  f1_score(y_pred, y_val_num)
+    return f1score
