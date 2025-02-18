@@ -18,3 +18,10 @@ btn_view.addEventListener('click', (e)=>{
     e.preventDefault()
     div_imgs.style.display = 'flex'
 })
+
+const limpiarTabla = ()=>{
+    while(tbl.firstChild){
+        tbl.removeChild(tbl.firstChild)
+    }
+}
+
