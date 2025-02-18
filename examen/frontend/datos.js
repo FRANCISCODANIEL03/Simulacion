@@ -25,3 +25,19 @@ const limpiarTabla = ()=>{
     }
 }
 
+const extraerDat = async ()=>{
+    const data = await fetch(URL)
+    const dataP = await data.json()
+    console.log(dataP)
+    limpiarTabla()
+    for(let i = 0; i < dataP.length; i++){
+        var tr = document.createElement("tr")
+        var td1 = document.createElement("td")
+        var td2 = document.createElement("td")
+        td1.textContent = dataP[i].name
+        td2.textContent = (dataP[i].porcent).toFixed(4)
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+        tbl.appendChild(tr)
+    }
+}
