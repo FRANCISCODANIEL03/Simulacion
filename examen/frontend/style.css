@@ -96,3 +96,8 @@ button:hover{
     margin: 10px;
     border-radius: 40px;
 }
+
+img{
+    width: 80%;
+    margin-bottom: 20px;
+}
