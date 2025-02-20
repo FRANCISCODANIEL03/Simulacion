@@ -123,3 +123,10 @@ table{
 table:hover{
     cursor: pointer;
 }
+
+td{
+    background-color: #ffffff33;
+    padding: 15px;
+    color: #fff;
+    text-align: left;
+}
